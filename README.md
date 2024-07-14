@@ -1,8 +1,12 @@
-# React + Vite
+# Dad Joke app using React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Screenshot 2024-07-14 193159](https://github.com/user-attachments/assets/d267b86c-6e53-45a9-a638-fe98d64bf3fe)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#Technologies used
+
+1. React.js
+2. MUI (Material-icons)
+3. Axios
+4. API used in application ("https://icanhazdadjoke.com/")
+5. tailwind-css
