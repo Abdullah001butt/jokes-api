@@ -20,44 +20,48 @@ export default function Joke({ text, id, onVote }) {
   };
 
   return (
-    <Box className="joke">
-      <Box className="jokeButtons">
-        <span onClick={handleVoteUp}>
-          <ArrowUpward className="arrowIcon" />
-        </span>
-        <Typography className="votesLabel">{votes}</Typography>
-        <span onClick={handleVoteDown}>
-          <ArrowDownward className="arrowIcon" />
-        </span>
-      </Box>
-      <Box className="jokeText">{text}</Box>
-      <Box className="jokeEmoji">
-        {voteCount <= 5 ? (
-          <span role="img" aria-label="laughing face">
-            😂
-          </span>
-        ) : voteCount <= 10 ? (
-          <span role="img" aria-label="smiling face">
-            😊
-          </span>
-        ) : voteCount <= 20 ? (
-          <span role="img" aria-label="grinning face">
-            😁
-          </span>
-        ) : voteCount > 20 ? (
-          <span role="img" aria-label="rolling on the floor laughing">
-            🤣
-          </span>
-        ) : voteCount < 0 ? (
-          <span role="img" aria-label="crying face">
-            😭
-          </span>
-        ) : (
-          <span role="img" aria-label="smiling face with smiling eyes">
-            😊
-          </span>
-        )}
-      </Box>
-    </Box>
+    <>
+      <div className="container">
+        <Box className="joke">
+          <Box className="jokeButtons">
+            <span onClick={handleVoteUp}>
+              <ArrowUpward className="arrowIcon" />
+            </span>
+            <Typography className="votesLabel">{votes}</Typography>
+            <span onClick={handleVoteDown}>
+              <ArrowDownward className="arrowIcon" />
+            </span>
+          </Box>
+          <Box className="jokeText">{text}</Box>
+          <Box className="jokeEmoji">
+            {voteCount <= 5 ? (
+              <span role="img" aria-label="laughing face">
+                😂
+              </span>
+            ) : voteCount <= 10 ? (
+              <span role="img" aria-label="smiling face">
+                😊
+              </span>
+            ) : voteCount <= 20 ? (
+              <span role="img" aria-label="grinning face">
+                😁
+              </span>
+            ) : voteCount > 20 ? (
+              <span role="img" aria-label="rolling on the floor laughing">
+                🤣
+              </span>
+            ) : voteCount < 0 ? (
+              <span role="img" aria-label="crying face">
+                😭
+              </span>
+            ) : (
+              <span role="img" aria-label="smiling face with smiling eyes">
+                😊
+              </span>
+            )}
+          </Box>
+        </Box>
+      </div>
+    </>
   );
 }
