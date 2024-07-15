@@ -14,9 +14,11 @@ export default function Joke({ text, id, onVote }) {
   };
 
   const handleVoteDown = () => {
-    setVoteCount(voteCount - 1);
-    setVotes(votes - 1);
-    onVote(-1);
+    if (votes > 0) {
+      setVoteCount(voteCount - 1);
+      setVotes(votes - 1);
+      onVote(-1);
+    }
   };
 
   return (
