@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import "./JokeLists.css";
 import { Box, Typography, Button, CircularProgress } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
@@ -48,6 +48,11 @@ export default function App() {
     );
   }
 
+  // Instead of using a function to sort the jokes, consider using a memoized value
+  const sortedJokes = useMemo(() => {
+    return jokes.slice().sort((a, b) => b.votes - a.votes);
+  }, [jokes]);
+
   return (
     <Box className="jokesList">
       <Box className="jokesListSidebar">
@@ -67,7 +72,7 @@ export default function App() {
         </Button>
       </Box>
       <Box className="jokesListJokes">
-        {jokes.map((joke) => {
+        {sortedJokes.map((joke) => {
           return (
             <Joke
               votes={joke.votes}
